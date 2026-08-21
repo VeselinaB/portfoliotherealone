@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#071522">
+<meta name="description" content="Vesselina Belcheva — short-form video editing, scripting and social media design for brands and service businesses.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<title>Vesselina Belcheva — Video Editing & Social Media Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#071522;
+  --bg-deep:#04101a;
+  --surface:#0c1c2d;
+  --surface-2:#10253a;
+  --surface-3:#132a42;
+  --line:rgba(155,197,236,.16);
+  --line-strong:rgba(155,197,236,.30);
+  --text:#f5f8fb;
+  --muted:#a8b6c8;
+  --muted-2:#71849a;
+  --blue:#74b9ff;
+  --blue-2:#3d8ee9;
+  --pink:#ff91b7;
+  --pink-2:#e86e9c;
+  --shadow:0 24px 80px rgba(0,0,0,.22);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:
+    radial-gradient(circle at 4% -8%,rgba(78,147,229,.17),transparent 34rem),
+    radial-gradient(circle at 98% 1%,rgba(255,145,183,.10),transparent 30rem),
+    linear-gradient(180deg,var(--bg),var(--bg-deep));
+  color:var(--text);
+  font-family:'Inter',sans-serif;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+}
+a{color:inherit}
+button{font:inherit}
+img,video{max-width:100%}
+.wrap{width:min(100% - 42px,1100px);margin:0 auto}
+.mono{font-family:'IBM Plex Mono',monospace}
+
+nav{
+  display:flex;justify-content:space-between;align-items:center;gap:18px;
+  padding:27px 0 20px;border-bottom:1px solid var(--line)
+}
+.brand{font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:.035em;text-decoration:none;font-size:15px;white-space:nowrap}
+.brand-dot{color:var(--pink)}
+.nav-right{display:flex;align-items:center;gap:18px}
+.nav-links{display:flex;gap:22px;font-size:12px;letter-spacing:.065em}
+.nav-links a{color:var(--muted);text-decoration:none;transition:.2s ease}.nav-links a:hover{color:var(--blue)}
+.lang-switch{display:flex;padding:2px;border:1px solid var(--line-strong);border-radius:999px;background:rgba(10,27,44,.75)}
+.lang-switch button{border:0;background:transparent;color:#c3cfdd;font-size:10.5px;line-height:1;padding:7px 9px;border-radius:999px;cursor:pointer;letter-spacing:.05em}
+.lang-switch button.active{background:linear-gradient(100deg,var(--blue),#9bcaff);color:#06111b;font-weight:700}
+
+.hero{padding:82px 0 68px}
+.eyebrow{font-size:11.5px;text-transform:uppercase;letter-spacing:.16em;color:#90c8ff;margin-bottom:18px;font-weight:500}
+h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(3rem,7vw,6.25rem);line-height:.96;letter-spacing:-.052em;max-width:1000px;text-wrap:balance}
+h1 em{font-style:normal;background:linear-gradient(95deg,var(--blue),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-copy{max-width:780px;color:#c3cfdd;font-size:clamp(1.08rem,2vw,1.22rem);margin-top:28px;text-wrap:pretty}
+.hero-meta{display:flex;flex-wrap:wrap;gap:9px;margin-top:27px}
+.pill{border:1px solid var(--line);background:rgba(12,28,45,.78);border-radius:999px;padding:9px 13px;font-size:11px;color:#e1e8f0;backdrop-filter:blur(10px);letter-spacing:.025em}
+.hero-cta{display:flex;gap:11px;flex-wrap:wrap;margin-top:32px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 17px;border-radius:6px;text-decoration:none;font-weight:600;font-size:13px;border:1px solid var(--line-strong);transition:.2s ease;min-height:43px}
+.btn.primary{background:linear-gradient(105deg,var(--blue),#9acbff);border-color:transparent;color:#06111b}.btn.primary:hover{transform:translateY(-1px);filter:brightness(1.04)}
+.btn.secondary{color:var(--text);background:rgba(255,255,255,.015)}.btn.secondary:hover{border-color:var(--pink);color:#ffd9e7;transform:translateY(-1px)}
+.hero-rule{height:1px;background:linear-gradient(90deg,var(--blue),var(--pink),transparent 72%);margin-top:64px;opacity:.75}
+
+section{padding:68px 0}
+.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:28px}
+h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.9rem,4vw,2.75rem);letter-spacing:-.03em;line-height:1.06;text-wrap:balance}
+.section-sub{max-width:640px;color:var(--muted);font-size:.94rem;margin-top:9px;text-wrap:pretty}
+
+.project{border:1px solid var(--line);background:linear-gradient(180deg,rgba(16,37,58,.82),rgba(8,23,38,.95));border-radius:12px;overflow:hidden;margin-bottom:28px;box-shadow:var(--shadow)}
+.project-copy{padding:28px 28px 24px;display:grid;grid-template-columns:1.3fr .7fr;gap:34px}
+.tag{display:inline-block;color:#ffd2e1;border:1px solid rgba(255,145,183,.37);background:rgba(255,145,183,.075);border-radius:4px;padding:4px 8px;font-size:9px;letter-spacing:.065em;margin-bottom:13px}
+.project h3{font-family:'Space Grotesk',sans-serif;font-size:1.42rem;margin-bottom:9px;letter-spacing:-.015em}
+.project p{color:var(--muted);font-size:.93rem;max-width:690px;text-wrap:pretty}
+.meta-list{display:grid;gap:10px;align-content:start}
+.meta-row{border-top:1px solid var(--line);padding-top:9px;font-size:10px;color:var(--muted)}
+.meta-row strong{display:block;color:var(--text);font-weight:500;margin-bottom:3px;letter-spacing:.045em}
+
+
+/* Concept video collection — full-width boxed gallery like the Sublue project */
+.concept-project{margin-top:34px}
+.concept-project-copy{grid-template-columns:1fr}
+.concept-project-copy p{
+  max-width:none;
+  white-space:nowrap;
+}
+.concept-video-wrap{padding:0 18px 22px}
+.concept-gallery{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+  width:100%;
+  align-items:start;
+}
+.concept-piece{
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:7px;
+  background:rgba(12,28,45,.45);
+  min-width:0;
+  width:100%;
+}
+.concept-piece.landscape-piece{
+  grid-column:1/-1;
+}
+.concept-media{
+  overflow:hidden;
+  background:#02060b;
+  line-height:0;
+  width:100%;
+}
+.portrait-media{aspect-ratio:9/16}
+.landscape-media{aspect-ratio:16/9}
+.concept-media video{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  background:#02060b;
+}
+.concept-piece-info{
+  display:flex;
+  justify-content:space-between;
+  gap:14px;
+  align-items:center;
+  padding:10px 12px;
+  border-top:1px solid var(--line);
+}
+.concept-piece-info strong{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:12.5px;
+}
+.concept-piece-info span{
+  font-size:8px;
+  color:var(--muted);
+  letter-spacing:.075em;
+  text-align:right;
+}
+/* More specific selector so the general .project p rule cannot enlarge this note */
+.project .concept-disclosure{
+  margin:0 12px 9px;
+  max-width:none;
+  color:var(--muted-2);
+  font-family:'IBM Plex Mono',monospace;
+  font-size:7px;
+  line-height:1.25;
+  letter-spacing:.025em;
+  opacity:.72;
+}
+@media(max-width:900px){
+  .concept-project-copy p{white-space:normal}
+}
+@media(max-width:700px){
+  .concept-project{margin-top:24px}
+  .concept-video-wrap{padding:0 10px 14px}
+  .concept-gallery{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:7px;
+  }
+  .concept-piece.landscape-piece{grid-column:1/-1}
+  .concept-piece-info{
+    display:block;
+    padding:8px 9px;
+  }
+  .concept-piece-info strong{font-size:10.5px}
+  .concept-piece-info span{
+    display:block;
+    margin-top:4px;
+    font-size:6.8px;
+    text-align:left;
+  }
+  .project .concept-disclosure{
+    margin:0 9px 7px;
+    font-size:6px;
+    line-height:1.2;
+  }
+}
+
+/* Plan B carousel */
+.carousel-wrap{padding:0 18px 21px}
+.carousel-head{display:flex;justify-content:flex-end;gap:8px;margin-bottom:10px}
+.carousel-btn{width:36px;height:36px;border:1px solid var(--line-strong);border-radius:50%;background:rgba(12,28,45,.9);color:var(--text);cursor:pointer;display:grid;place-items:center;font-size:17px;transition:.2s ease}
+.carousel-btn:hover:not(:disabled){border-color:var(--blue);color:var(--blue)}
+.carousel-btn:disabled{opacity:.28;cursor:default}
+.poster-carousel{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding-bottom:2px;-webkit-overflow-scrolling:touch}
+.poster-carousel::-webkit-scrollbar{display:none}
+.poster-card{flex:0 0 calc((100% - 30px)/4);scroll-snap-align:start;min-width:0}
+.poster-card img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;border-radius:6px;border:1px solid var(--line);cursor:zoom-in;transition:transform .2s ease,border-color .2s ease;background:#07111d}
+.poster-card img:hover{transform:translateY(-2px);border-color:rgba(116,185,255,.52)}
+.carousel-note{font-size:9px;color:var(--muted-2);margin-top:9px;text-align:right;letter-spacing:.04em}
+
+/* Sublue collage — same visual idea as the original site, but aligned */
+.video-wrap{padding:0 18px 21px}
+.video-gallery{display:grid;grid-template-columns:minmax(0,.65fr) minmax(0,1fr);grid-template-rows:auto auto;gap:10px;align-items:stretch}
+.video-cell{overflow:hidden;border-radius:7px;border:1px solid var(--line);background:#02060b;min-width:0}
+.video-cell video{width:100%;height:100%;display:block;background:#02060b;object-fit:cover}
+.video-cell.v-vertical{grid-column:1;grid-row:1;align-self:stretch}
+.video-cell.v-square{grid-column:2;grid-row:1;aspect-ratio:1/1}
+.video-cell.v-horizontal{grid-column:1/3;grid-row:2;aspect-ratio:16/9}
+
+.testimonial-card{
+  position:relative;
+  overflow:hidden;
+  border:1px solid var(--line-strong);
+  border-radius:8px;
+  margin:0 18px 18px;
+  padding:23px 24px 21px;
+  background:
+    radial-gradient(circle at 92% 8%,rgba(255,145,183,.10),transparent 19rem),
+    linear-gradient(135deg,rgba(17,39,61,.96),rgba(8,23,38,.98));
+}
+.testimonial-card:before{
+  content:'“';
+  position:absolute;
+  right:16px;
+  top:-25px;
+  font-family:'Space Grotesk',sans-serif;
+  font-size:125px;
+  line-height:1;
+  color:rgba(116,185,255,.08);
+  pointer-events:none;
+}
+.testimonial-card .eyebrow{margin-bottom:10px}
+.testimonial-card blockquote{
+  position:relative;
+  z-index:1;
+  max-width:940px;
+  color:var(--muted);
+  font-family:'Inter',sans-serif;
+  font-size:.93rem;
+  line-height:1.55;
+  letter-spacing:0;
+  text-wrap:pretty;
+}
+.testimonial-source{position:relative;z-index:1;display:flex;align-items:center;gap:12px;margin-top:16px}
+.testimonial-mark{width:36px;height:2px;background:linear-gradient(90deg,var(--blue),var(--pink))}
+.testimonial-source strong{font-family:'Space Grotesk',sans-serif;font-size:.9rem}
+.testimonial-source span{display:block;margin-top:2px;color:var(--muted);font-size:9px;letter-spacing:.07em}
+
+.cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.cap{background:linear-gradient(180deg,rgba(16,37,58,.72),rgba(11,28,45,.88));border:1px solid var(--line);padding:21px;border-radius:8px;min-height:132px}
+.cap-no{font-size:9px;color:var(--pink);margin-bottom:16px;letter-spacing:.08em}
+.cap strong{font-family:'Space Grotesk',sans-serif;display:block;font-size:1rem;margin-bottom:6px}
+.cap span{font-size:.84rem;color:var(--muted);text-wrap:pretty}
+
+.process-heading{margin-top:46px;margin-bottom:16px}
+.process-heading .eyebrow{margin-bottom:7px}
+.process-heading h3{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.35rem,2.4vw,1.8rem);line-height:1.12;letter-spacing:-.02em}
+.process{margin-top:0;border:1px solid var(--line);border-radius:9px;overflow:hidden;display:grid;grid-template-columns:repeat(3,1fr)}
+.process-step{padding:22px;border-right:1px solid var(--line);background:rgba(9,25,40,.72)}
+.process-step:last-child{border-right:0}
+.process-step b{display:block;color:var(--blue);font-family:'IBM Plex Mono',monospace;font-size:9.5px;margin-bottom:8px}
+.process-step strong{font-family:'Space Grotesk',sans-serif;font-size:.96rem;display:block;margin-bottom:5px}
+.process-step span{color:var(--muted);font-size:.82rem}
+.remote-note{margin-top:18px;color:var(--muted);font-size:.9rem;border-left:2px solid var(--pink);padding:4px 0 4px 14px;max-width:790px}
+
+.contact{position:relative;overflow:hidden;background:linear-gradient(135deg,rgba(17,39,61,.96),rgba(9,24,39,.99));border:1px solid var(--line-strong);border-radius:12px;padding:39px;box-shadow:var(--shadow)}
+.contact:after{content:'';position:absolute;width:370px;height:370px;border-radius:50%;right:-180px;top:-210px;background:radial-gradient(circle,rgba(255,145,183,.14),transparent 68%);pointer-events:none}
+.contact h2{max-width:850px;font-size:clamp(2rem,4vw,3.2rem);line-height:1.04;position:relative;z-index:1}
+.contact h2 em{font-style:normal;color:var(--pink)}
+.contact p{color:var(--muted);max-width:720px;margin-top:14px;position:relative;z-index:1;text-wrap:pretty}
+.contact-links{display:flex;gap:11px;flex-wrap:wrap;margin-top:26px;position:relative;z-index:1}
+.contact-email-card{position:relative;z-index:1;margin-top:28px;padding:23px;border:1px solid var(--line);border-radius:9px;background:rgba(4,16,26,.45)}
+.contact-email-label{font-size:9px;letter-spacing:.1em;color:var(--blue);margin-bottom:8px}
+.contact-email-address{display:inline-block;font-family:'Space Grotesk',sans-serif;font-size:clamp(1.05rem,2.8vw,1.45rem);font-weight:600;text-decoration:none;overflow-wrap:anywhere}
+.contact-email-address:hover{color:var(--pink)}
+.contact p.contact-email-help{margin-top:6px;font-size:.82rem}
+.contact-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+.copy-status{min-height:15px;margin-top:10px;color:var(--blue);font-size:9px;letter-spacing:.08em}
+
+footer{padding:38px 0 55px;color:var(--muted-2);font-size:9px;display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line)}
+.lightbox{position:fixed;inset:0;background:rgba(2,7,12,.96);display:none;align-items:center;justify-content:center;padding:24px;z-index:50;cursor:zoom-out}
+.lightbox.open{display:flex}.lightbox img{max-width:min(94vw,860px);max-height:93vh;object-fit:contain;border-radius:7px;box-shadow:0 30px 90px rgba(0,0,0,.65)}
+
+@media(max-width:900px){
+  .project-copy{grid-template-columns:1fr}.meta-list{grid-template-columns:repeat(3,1fr)}
+  .poster-card{flex-basis:calc((100% - 20px)/3)}
+  .cap-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:700px){
+  .wrap{width:min(100% - 26px,1100px)}
+  nav{padding:18px 0 15px;gap:10px}.brand{font-size:13px}.nav-right{gap:9px}.nav-links{gap:12px;font-size:10.5px}.nav-links a:nth-child(2){display:none}
+  .lang-switch button{padding:6px 8px;font-size:10px}
+  .hero{padding:52px 0 44px}.eyebrow{font-size:10.2px;margin-bottom:14px;line-height:1.5}h1{font-size:clamp(2.65rem,14.2vw,4.35rem);line-height:.97;letter-spacing:-.047em}.hero-copy{font-size:1.02rem;line-height:1.62;margin-top:22px}.hero-meta{margin-top:22px}.hero-rule{margin-top:45px}
+  section{padding:52px 0}.section-head{display:block;margin-bottom:22px}h2{font-size:clamp(1.75rem,8.3vw,2.35rem)}.project-copy{padding:22px 17px;gap:20px}.project h3{font-size:1.23rem}.meta-list{grid-template-columns:1fr}
+  .carousel-wrap{padding:0 12px 16px}.carousel-head{margin-bottom:8px}.carousel-btn{width:34px;height:34px}.poster-card{flex-basis:84%}.carousel-note{text-align:left;padding-left:2px}
+  .video-wrap{padding:0 12px 16px}.video-gallery{grid-template-columns:1fr;grid-template-rows:none;gap:9px}
+  .video-cell.v-vertical,.video-cell.v-square,.video-cell.v-horizontal{grid-column:1;grid-row:auto}
+  .video-cell.v-vertical{aspect-ratio:3/4}.video-cell.v-square{aspect-ratio:1/1}.video-cell.v-horizontal{aspect-ratio:16/9}
+  .testimonial-card{margin:0 12px 14px;padding:20px 16px 18px}.testimonial-card:before{right:6px;top:-18px;font-size:100px}.testimonial-card blockquote{font-size:.93rem;line-height:1.55}
+  .cap-grid{grid-template-columns:1fr}.cap{min-height:auto;padding:19px}.process{grid-template-columns:1fr}.process-step{border-right:0;border-bottom:1px solid var(--line);padding:19px}.process-step:last-child{border-bottom:0}
+  .contact{padding:27px 20px}.contact h2{font-size:clamp(1.9rem,9.6vw,2.55rem)}.contact-links{display:grid;grid-template-columns:1fr 1fr}.contact-links .primary{grid-column:1/3}.contact-links .btn{width:100%}
+  .contact-email-card{padding:18px 15px}.contact-actions{display:grid;grid-template-columns:1fr 1fr}.contact-actions .btn{width:100%}.contact-actions .primary{grid-column:1/3}
+  footer{display:block;line-height:1.9;padding-bottom:36px}
+}
+@media(max-width:420px){
+  .nav-links a:nth-child(1){display:none}
+  .hero-cta{display:grid;grid-template-columns:1fr}.hero-cta .btn{width:100%}
+  .pill{font-size:9.6px;padding:8px 10px}
+  .poster-card{flex-basis:88%}
+  .contact h2{font-size:clamp(1.82rem,9.2vw,2.28rem)}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body data-lang="en">
+<div class="wrap">
+  <nav>
+    <a class="brand" href="#top">VESSELINA BELCHEVA<span class="brand-dot">.</span></a>
+    <div class="nav-right">
+      <div class="nav-links mono">
+        <a href="#work" data-i18n="navWork">WORK</a>
+        <a href="#services" data-i18n="navServices">SERVICES</a>
+        <a href="#contact" data-i18n="navContact">CONTACT</a>
+      </div>
+      <div class="lang-switch mono" aria-label="Language">
+        <button type="button" data-lang-btn="en" class="active">EN</button>
+        <button type="button" data-lang-btn="bg">BG</button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="eyebrow mono" data-i18n="heroEyebrow">SHORT-FORM VIDEO · SCRIPTING · SOCIAL DESIGN</div>
+    <h1 data-i18n-html="heroTitle">I turn raw footage into content <em>worth watching.</em></h1>
+    <p class="hero-copy" data-i18n="heroCopy">Scripts, short-form edits and social visuals for brands that already have something worth showing — but need the story, pacing and polish to make it land.</p>
+    <div class="hero-meta mono">
+      <span class="pill" data-i18n="pill1">BASED IN BULGARIA · WORKING REMOTELY</span>
+      <span class="pill" data-i18n="pill2">CLIENT-PROVIDED FOOTAGE</span>
+      <span class="pill" data-i18n="pill3">AVAILABLE FOR NEW PROJECTS</span>
+    </div>
+    <div class="hero-cta">
+      <a class="btn primary" href="#work" data-i18n="viewWork">View selected work</a>
+      <a class="btn secondary" href="#contact" data-i18n="startProject">Start a project</a>
+    </div>
+    <div class="hero-rule" aria-hidden="true"></div>
+  </header>
+
+  <section id="work">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow mono" data-i18n="selectedWork">SELECTED WORK</div>
+        <h2 data-i18n="workHeading">Design, editing and story — built for social.</h2>
+        <p class="section-sub" data-i18n="workSub">A selection of client and brand work across social design, scripting and short-form video editing.</p>
+      </div>
+    </div>
+
+    <article class="project">
+      <div class="project-copy">
+        <div>
+          <span class="tag mono" data-i18n="planTag">ONGOING CLIENT · SOCIAL DESIGN</span>
+          <h3 data-i18n="planTitle">Plan B Varna — Social Content Series</h3>
+          <p data-i18n="planCopy">An ongoing monthly collaboration with a local food brand: eight social posts for July and another eight for August. I built a connected visual system using oversized typography, strong food crops and repeated brand details, while giving every post its own composition.</p>
+        </div>
+        <div class="meta-list mono">
+          <div class="meta-row"><strong data-i18n="role">ROLE</strong><span data-i18n="planRole">Art direction · Design · Photo treatment</span></div>
+          <div class="meta-row"><strong data-i18n="deliverables">DELIVERABLES</strong><span data-i18n="planDeliverables">16 social posts · 8 per month</span></div>
+          <div class="meta-row"><strong data-i18n="date">DATE</strong><span data-i18n="planDate">July–August 2026 · Ongoing</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="eyebrow mono" data-i18n="testimonialEyebrow">CLIENT TESTIMONIAL</div>
+        <blockquote data-i18n="testimonialQuote">Working with Vesselina is a real pleasure! She managed to present our place in the best possible way and show its character through great ideas and content. Thanks to her work, we became more recognizable and are reaching more people. Huge thanks to Vesselina for the professionalism, creativity and dedication with which she brought our Instagram profile to life!</blockquote>
+        <div class="testimonial-source">
+          <span class="testimonial-mark" aria-hidden="true"></span>
+          <div>
+            <strong>Plan B Varna</strong>
+            <span class="mono" data-i18n="testimonialRole">CLIENT</span>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-wrap">
+        <div class="carousel-head">
+          <button class="carousel-btn" id="prevPoster" aria-label="Previous posts">‹</button>
+          <button class="carousel-btn" id="nextPoster" aria-label="Next posts">›</button>
+        </div>
+        <div class="poster-carousel" id="posterCarousel">
+          <div class="poster-card"><img src="assets/planb-03.webp" alt="Plan B Varna parmesan potato social post" loading="lazy"></div>
+          <div class="poster-card"><img src="assets/planb-07.webp" alt="Plan B Varna shrimp and edamame bowl social post" loading="lazy"></div>
+          <div class="poster-card"><img src="assets/planb-06.webp" alt="Plan B Varna shrimp salad social post" loading="lazy"></div>
+          <div class="poster-card"><img src="assets/planb-01.webp" alt="Plan B Varna beef bagel social post" loading="lazy"></div>
+          <div class="poster-card"><img src="assets/planb-05.webp" alt="Plan B Varna egg bowl social post" loading="lazy"></div>
+          <div class="poster-card"><img src="assets/planb-04.webp" alt="Plan B Varna bean bagel social post" loading="lazy"></div>
+          <div class="poster-card"><img src="assets/planb-02.webp" alt="Plan B Varna avocado bagel social post" loading="lazy"></div>
+          <div class="poster-card"><img src="assets/planb-08.webp" alt="Plan B Varna bagel social post" loading="lazy"></div>
+        </div>
+        <div class="carousel-note mono" data-i18n="carouselNote">SWIPE OR USE THE ARROWS · TAP A POST TO EXPAND</div>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-copy">
+        <div>
+          <span class="tag mono" data-i18n="sublueTag">BRAND CONTENT · VIDEO EDITING</span>
+          <h3 data-i18n="sublueTitle">Sublue — Short-Form Video Content</h3>
+          <p data-i18n="sublueCopy">A 60+ video short-form content run for an underwater scooter brand, created from existing footage. My role covered concept direction, scripting, pacing, subtitles, sound design and final delivery.</p>
+        </div>
+        <div class="meta-list mono">
+          <div class="meta-row"><strong data-i18n="role">ROLE</strong><span data-i18n="sublueRole">Script · Edit · Subtitles · Sound</span></div>
+          <div class="meta-row"><strong data-i18n="deliverables">DELIVERABLES</strong><span data-i18n="sublueDeliverables">60+ short-form videos</span></div>
+          <div class="meta-row"><strong data-i18n="date">DATE</strong><span data-i18n="sublueDate">April–May 2026</span></div>
+        </div>
+      </div>
+      <div class="video-wrap">
+        <div class="video-gallery">
+          <div class="video-cell v-vertical"><video playsinline controls preload="metadata" poster="assets/sublue-vertical-poster.jpg"><source src="assets/sublue-vertical.mp4" type="video/mp4"></video></div>
+          <div class="video-cell v-square"><video playsinline controls preload="metadata" poster="assets/sublue-square-poster.jpg"><source src="assets/sublue-square.mp4" type="video/mp4"></video></div>
+          <div class="video-cell v-horizontal"><video playsinline controls preload="metadata" poster="assets/sublue-horizontal-poster.jpg"><source src="assets/sublue-horizontal.mp4" type="video/mp4"></video></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="project concept-project">
+      <div class="project-copy concept-project-copy">
+        <div>
+          <span class="tag mono" data-i18n="conceptEyebrow">CONCEPT EDITS</span>
+          <h3 data-i18n="conceptHeading">Editing, motion & visual experiments.</h3>
+          <p data-i18n="conceptIntro">Self-initiated videos showing pacing, motion graphics, sound design and different visual styles.</p>
+        </div>
+      </div>
+
+      <div class="concept-video-wrap">
+        <div class="concept-gallery">
+
+          <article class="concept-piece portrait-piece">
+            <div class="concept-media portrait-media">
+              <video playsinline controls preload="metadata" poster="assets/concept-edit-02-poster.jpg">
+                <source src="assets/concept-edit-02.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="concept-piece-info">
+              <strong data-i18n="concept02Title">Concept Edit 02</strong>
+              <span class="mono" data-i18n="concept02Meta">PACING · TYPOGRAPHY · SOUND · MOOD</span>
+            </div>
+            <p class="concept-disclosure" data-i18n="aiVoiceNote">AI voiceover used because no original speaker recording was available.</p>
+          </article>
+
+          <article class="concept-piece portrait-piece">
+            <div class="concept-media portrait-media">
+              <video playsinline controls preload="metadata" poster="assets/talking-head-edit-poster.jpg">
+                <source src="assets/talking-head-edit.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="concept-piece-info">
+              <strong data-i18n="talkTitle">Talking Head Edit</strong>
+              <span class="mono" data-i18n="talkMeta">SUBTITLES · PACING · SOCIAL EDIT</span>
+            </div>
+          </article>
+
+          <article class="concept-piece landscape-piece">
+            <div class="concept-media landscape-media">
+              <video playsinline controls preload="metadata" poster="assets/concept-edit-01-poster.jpg">
+                <source src="assets/concept-edit-01.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="concept-piece-info">
+              <strong data-i18n="concept01Title">Concept Edit 01</strong>
+              <span class="mono" data-i18n="concept01Meta">EDITING · MOTION GRAPHICS · SOUND DESIGN</span>
+            </div>
+            <p class="concept-disclosure" data-i18n="aiVoiceNote">AI voiceover used because no original speaker recording was available.</p>
+          </article>
+
+          <article class="concept-piece landscape-piece">
+            <div class="concept-media landscape-media">
+              <video playsinline controls preload="metadata" poster="assets/nike-sound-design-poster.jpg">
+                <source src="assets/nike-sound-design.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="concept-piece-info">
+              <strong data-i18n="nikeTitle">Nike Spec Edit</strong>
+              <span class="mono" data-i18n="nikeMeta">SOUND DESIGN · PACING · IMPACT</span>
+            </div>
+            <p class="concept-disclosure" data-i18n="nikeDisclosure">Self-initiated concept; not commissioned by Nike.</p>
+          </article>
+
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <section id="services">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow mono" data-i18n="whatIHandle">WHAT I HANDLE</div>
+        <h2 data-i18n="servicesHeading">You send the material. I build the finished piece.</h2>
+        <p class="section-sub" data-i18n="servicesSub">Remote-first support for brands that already shoot content but need stronger ideas, structure and execution.</p>
+      </div>
+    </div>
+    <div class="cap-grid">
+      <div class="cap"><div class="cap-no mono">01</div><strong data-i18n="service1Title">Scripts & content concepts</strong><span data-i18n="service1Copy">Hooks, angles and story structure built around what your business actually needs to communicate.</span></div>
+      <div class="cap"><div class="cap-no mono">02</div><strong data-i18n="service2Title">Short-form video editing</strong><span data-i18n="service2Copy">Tighter pacing, cleaner structure and edits designed for social-first viewing.</span></div>
+      <div class="cap"><div class="cap-no mono">03</div><strong data-i18n="service3Title">Voiceover & sound design</strong><span data-i18n="service3Copy">Explanatory narration, audio choices and timing that make footage feel intentional.</span></div>
+      <div class="cap"><div class="cap-no mono">04</div><strong data-i18n="service4Title">Subtitles & motion text</strong><span data-i18n="service4Copy">Readable on-screen text that supports the story instead of competing with it.</span></div>
+      <div class="cap"><div class="cap-no mono">05</div><strong data-i18n="service5Title">Social media design</strong><span data-i18n="service5Copy">Individual posts and connected visual series that stay recognisable without feeling repetitive.</span></div>
+      <div class="cap"><div class="cap-no mono">06</div><strong data-i18n="service6Title">Shot lists & repurposing</strong><span data-i18n="service6Copy">Clear filming guidance and new edits built from material your team already has.</span></div>
+    </div>
+
+    <div class="process-heading">
+      <div class="eyebrow mono" data-i18n="processEyebrow">HOW IT WORKS</div>
+      <h3 data-i18n="processHeading">From your footage to finished content.</h3>
+    </div>
+
+    <div class="process">
+      <div class="process-step"><b data-i18n="step1No">01 · SEND</b><strong data-i18n="step1Title">Your footage or page</strong><span data-i18n="step1Copy">Raw clips, photos or an existing social profile are enough to start.</span></div>
+      <div class="process-step"><b data-i18n="step2No">02 · BUILD</b><strong data-i18n="step2Title">Angle, script and edit</strong><span data-i18n="step2Copy">I shape the message, pacing, text and sound around the content.</span></div>
+      <div class="process-step"><b data-i18n="step3No">03 · DELIVER</b><strong data-i18n="step3Title">Finished social content</strong><span data-i18n="step3Copy">You receive a polished file ready to review and publish.</span></div>
+    </div>
+    <p class="remote-note" data-i18n="remoteNote">No on-site production is required for most projects. Your team can film on a phone using a simple shot list, then send the raw clips to me.</p>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <div class="eyebrow mono" data-i18n="ready">READY WHEN YOU ARE</div>
+      <h2 data-i18n-html="contactHeading">Let's make your footage<br><em>work harder.</em></h2>
+      <p data-i18n="contactCopy">Send me your page or a few raw clips. I can suggest the angle, write the script and turn the material into a polished short-form edit.</p>
+      <div class="contact-email-card" id="contact-email">
+        <div class="contact-email-label mono" data-i18n="directEmail">DIRECT EMAIL</div>
+        <a class="contact-email-address" href="mailto:veselina.belcheva8@gmail.com">veselina.belcheva8@gmail.com</a>
+        <p class="contact-email-help" data-i18n="emailHelp">Copy the address or open it in your email app.</p>
+        <div class="contact-actions">
+          <button class="btn primary copy-email" type="button" id="copyEmail" data-i18n="copyEmail">Copy email</button>
+          <a class="btn secondary" href="mailto:veselina.belcheva8@gmail.com" data-i18n="openEmail">Open email app</a>
+          <a class="btn secondary" href="https://www.instagram.com/_v.belcheva_/" target="_blank" rel="noopener">Instagram</a>
+          <a class="btn secondary" href="https://www.tiktok.com/@v.belcheva_" target="_blank" rel="noopener">TikTok</a>
+        </div>
+        <div class="copy-status mono" id="copyStatus" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="mono"><span data-i18n="footerLeft">VESSELINA BELCHEVA · VIDEO EDITING & SOCIAL DESIGN</span><span data-i18n="footerRight">UPDATED 08.2026</span></footer>
+</div>
+
+<div class="lightbox" id="lightbox" aria-hidden="true"><img src="" alt="Expanded portfolio image"></div>
+
+<script>
+const translations={
+  en:{
+    navWork:'WORK',navServices:'SERVICES',navContact:'CONTACT',
+    heroEyebrow:'SHORT-FORM VIDEO · SCRIPTING · SOCIAL DESIGN',
+    heroTitle:'I turn raw footage into content <em>worth watching.</em>',
+    heroCopy:'Scripts, short-form edits and social visuals for brands that already have something worth showing — but need the story, pacing and polish to make it land.',
+    pill1:'BASED IN BULGARIA · WORKING REMOTELY',pill2:'CLIENT-PROVIDED FOOTAGE',pill3:'AVAILABLE FOR NEW PROJECTS',
+    viewWork:'View selected work',startProject:'Start a project',selectedWork:'SELECTED WORK',
+    workHeading:'Design, editing and story — built for social.',workSub:'A selection of client and brand work across social design, scripting and short-form video editing.',
+    planTag:'ONGOING CLIENT · SOCIAL DESIGN',planTitle:'Plan B Varna — Social Content Series',
+    planCopy:'An ongoing monthly collaboration with a local food brand: eight social posts for July and another eight for August. I built a connected visual system using oversized typography, strong food crops and repeated brand details, while giving every post its own composition.',
+    role:'ROLE',deliverables:'DELIVERABLES',date:'DATE',format:'FORMAT',planRole:'Art direction · Design · Photo treatment',planDeliverables:'16 social posts · 8 per month',planDate:'July–August 2026 · Ongoing',
+    carouselNote:'SWIPE OR USE THE ARROWS · TAP A POST TO EXPAND',
+    conceptEyebrow:'CONCEPT EDITS',conceptHeading:'Editing, motion & visual experiments.',
+    conceptIntro:'Self-initiated videos showing pacing, motion graphics, sound design and different visual styles.',
+    concept01Title:'Concept Edit 01',concept01Meta:'EDITING · MOTION GRAPHICS · SOUND DESIGN',concept02Title:'Concept Edit 02',concept02Meta:'PACING · TYPOGRAPHY · SOUND · MOOD',talkTitle:'Talking Head Edit',talkMeta:'SUBTITLES · PACING · SOCIAL EDIT',aiVoiceNote:'AI voiceover used because no original speaker recording was available.',
+    nikeTitle:'Nike Spec Edit',nikeMeta:'SOUND DESIGN · PACING · IMPACT',nikeDisclosure:'Self-initiated concept; not commissioned by Nike.',
+    sublueTag:'BRAND CONTENT · VIDEO EDITING',sublueTitle:'Sublue — Short-Form Video Content',
+    sublueCopy:'A 60+ video short-form content run for an underwater scooter brand, created from existing footage. My role covered concept direction, scripting, pacing, subtitles, sound design and final delivery.',
+    sublueRole:'Script · Edit · Subtitles · Sound',sublueDeliverables:'60+ short-form videos',sublueDate:'April–May 2026',
+    whatIHandle:'WHAT I HANDLE',servicesHeading:'You send the material. I build the finished piece.',servicesSub:'Remote-first support for brands that already shoot content but need stronger ideas, structure and execution.',
+    service1Title:'Scripts & content concepts',service1Copy:'Hooks, angles and story structure built around what your business actually needs to communicate.',
+    service2Title:'Short-form video editing',service2Copy:'Tighter pacing, cleaner structure and edits designed for social-first viewing.',
+    service3Title:'Voiceover & sound design',service3Copy:'Explanatory narration, audio choices and timing that make footage feel intentional.',
+    service4Title:'Subtitles & motion text',service4Copy:'Readable on-screen text that supports the story instead of competing with it.',
+    service5Title:'Social media design',service5Copy:'Individual posts and connected visual series that stay recognisable without feeling repetitive.',
+    service6Title:'Shot lists & repurposing',service6Copy:'Clear filming guidance and new edits built from material your team already has.',
+    processEyebrow:'HOW IT WORKS',processHeading:'From your footage to finished content.',
+    step1No:'01 · SEND',step1Title:'Your footage or page',step1Copy:'Raw clips, photos or an existing social profile are enough to start.',
+    step2No:'02 · BUILD',step2Title:'Angle, script and edit',step2Copy:'I shape the message, pacing, text and sound around the content.',
+    step3No:'03 · DELIVER',step3Title:'Finished social content',step3Copy:'You receive a polished file ready to review and publish.',
+    remoteNote:'No on-site production is required for most projects. Your team can film on a phone using a simple shot list, then send the raw clips to me.',
+    testimonialEyebrow:'CLIENT TESTIMONIAL',testimonialQuote:'Working with Vesselina is a real pleasure! She managed to present our place in the best possible way and show its character through great ideas and content. Thanks to her work, we became more recognizable and are reaching more people. Huge thanks to Vesselina for the professionalism, creativity and dedication with which she brought our Instagram profile to life!',testimonialRole:'CLIENT',
+    ready:'READY WHEN YOU ARE',contactHeading:"Let's make your footage<br><em>work harder.</em>",
+    contactCopy:'Send me your page or a few raw clips. I can suggest the angle, write the script and turn the material into a polished short-form edit.',emailMe:'Email me',directEmail:'DIRECT EMAIL',emailHelp:'Copy the address or open it in your email app.',copyEmail:'Copy email',openEmail:'Open email app',copied:'EMAIL COPIED',
+    footerLeft:'VESSELINA BELCHEVA · VIDEO EDITING & SOCIAL DESIGN',footerRight:'UPDATED 08.2026'
+  },
+  bg:{
+    navWork:'РАБОТА',navServices:'УСЛУГИ',navContact:'КОНТАКТ',
+    heroEyebrow:'КРАТКИ ВИДЕА · СЦЕНАРИИ · ДИЗАЙН ЗА СОЦИАЛНИ МРЕЖИ',
+    heroTitle:'Превръщам суровите кадри в съдържание, което <em>си струва да се гледа.</em>',
+    heroCopy:'Сценарии, кратки видеа и визуално съдържание за брандове, които вече имат какво да покажат, но имат нужда от по-силна история, ритъм и завършена обработка.',
+    pill1:'БАЗИРАНА В БЪЛГАРИЯ · РАБОТЯ ДИСТАНЦИОННО',pill2:'РАБОТЯ С КАДРИ ОТ КЛИЕНТА',pill3:'ПРИЕМАМ НОВИ ПРОЕКТИ',
+    viewWork:'Виж избрана работа',startProject:'Започни проект',selectedWork:'ИЗБРАНА РАБОТА',
+    workHeading:'Дизайн, монтаж и история — създадени за социалните мрежи.',workSub:'Подбрани клиентски и бранд проекти в областта на дизайна, сценариите и обработката на кратки видеа.',
+    planTag:'ПОСТОЯНЕН КЛИЕНТ · ДИЗАЙН ЗА СОЦИАЛНИ МРЕЖИ',planTitle:'Plan B Varna — серия за социални мрежи',
+    planCopy:'Продължаваща месечна работа с местен бранд за храна: осем публикации за юли и още осем за август. Създадох свързана визуална система с едра типография, силно изрязани кадри на храната и повтарящи се бранд елементи, като всяка публикация запазва собствена композиция.',
+    role:'РОЛЯ',deliverables:'ИЗПЪЛНЕНИЕ',date:'ДАТА',format:'ФОРМАТ',planRole:'Визуална посока · Дизайн · Обработка на снимки',planDeliverables:'16 публикации · по 8 месечно',planDate:'юли–август 2026 · текуща работа',
+    carouselNote:'ПЛЪЗНИ ИЛИ ИЗПОЛЗВАЙ СТРЕЛКИТЕ · НАТИСНИ ЗА УГОЛЕМЯВАНЕ',
+    conceptEyebrow:'КОНЦЕПТУАЛНИ ВИДЕА',conceptHeading:'Монтаж, движещи се графики и визуални експерименти.',
+    conceptIntro:'Самостоятелно създадени видеа, които показват ритъм, движещи се графики, звуково оформление и различни визуални стилове.',
+    concept01Title:'Концептуално видео 01',concept01Meta:'МОНТАЖ · ДВИЖЕЩИ СЕ ГРАФИКИ · ЗВУКОВО ОФОРМЛЕНИЕ',concept02Title:'Концептуално видео 02',concept02Meta:'РИТЪМ · ТИПОГРАФИЯ · ЗВУК · НАСТРОЕНИЕ',talkTitle:'Видео с говорещ човек',talkMeta:'СУБТИТРИ · РИТЪМ · МОНТАЖ ЗА СОЦИАЛНИ МРЕЖИ',aiVoiceNote:'Използван е глас, генериран с изкуствен интелект, тъй като няма запис на реален говорещ човек.',
+    nikeTitle:'Nike — концептуален монтаж',nikeMeta:'ЗВУКОВО ОФОРМЛЕНИЕ · РИТЪМ · ВЪЗДЕЙСТВИЕ',nikeDisclosure:'Самостоятелен концептуален проект, който не е поръчан от Nike.',
+    sublueTag:'СЪДЪРЖАНИЕ ЗА БРАНД · ВИДЕО МОНТАЖ',sublueTitle:'Sublue — кратки видеа за социални мрежи',
+    sublueCopy:'Серия от над 60 кратки видеа за бранд за подводни скутери, изградени от вече заснет материал. Работата ми включва идея, сценарий, ритъм на монтажа, надписи, звуково оформление и финална обработка.',
+    sublueRole:'Сценарий · Монтаж · Надписи · Звук',sublueDeliverables:'Над 60 кратки видеа',sublueDate:'април–май 2026',
+    whatIHandle:'КАКВО ПОЕМАМ',servicesHeading:'Ти изпращаш материала. Аз изграждам крайното съдържание.',servicesSub:'Дистанционна работа за брандове, които вече заснемат материал, но имат нужда от по-силни идеи, структура и изпълнение.',
+    service1Title:'Сценарии и идеи',service1Copy:'Силни начала, различни подходи и структура на историята според това, което бизнесът реално трябва да комуникира.',
+    service2Title:'Обработка на кратки видеа',service2Copy:'По-стегнат ритъм, ясна структура и монтаж, съобразен със социалните мрежи.',
+    service3Title:'Глас зад кадър и звук',service3Copy:'Обяснителен глас, подходящ звук и точен ритъм, които правят кадрите по-завършени.',
+    service4Title:'Надписи и движещ се текст',service4Copy:'Четими надписи, които помагат на историята, вместо да се състезават с нея.',
+    service5Title:'Дизайн за социални мрежи',service5Copy:'Отделни публикации и свързани серии с разпознаваема визия, без да изглеждат еднакво.',
+    service6Title:'Насоки за заснемане и повторно използване',service6Copy:'Ясни насоки какво да бъде заснето и нови видеа от материалите, с които екипът вече разполага.',
+    processEyebrow:'КАК РАБОТИМ',processHeading:'От твоите кадри до готово съдържание.',
+    step1No:'01 · ИЗПРАЩАШ',step1Title:'Кадри или профил',step1Copy:'Сурови клипове, снимки или съществуващ профил са достатъчни, за да започнем.',
+    step2No:'02 · ИЗГРАЖДАМ',step2Title:'Идея, сценарий и монтаж',step2Copy:'Подреждам посланието, ритъма, текста и звука около конкретния материал.',
+    step3No:'03 · ПОЛУЧАВАШ',step3Title:'Готово съдържание',step3Copy:'Получаваш завършен файл, готов за преглед и публикуване.',
+    remoteNote:'За повечето проекти не е необходимо да снимам на място. Екипът ти може да заснеме необходимите кадри с телефон по кратки мои насоки и след това да ми изпрати суровия материал.',
+    testimonialEyebrow:'ОТЗИВ ОТ КЛИЕНТ',testimonialQuote:'Работата ни с Веселина е истинско удоволствие! Тя успя да представи нашето място по най-добрия начин и да покаже неговия характер чрез страхотни идеи и съдържание. Благодарение на нейната работа станахме по-разпознаваеми и достигаме до повече хора. Огромни благодарности на Веселина за професионализма, креативността и отдадеността, с които вдъхна живот на нашия Instagram профил!',testimonialRole:'КЛИЕНТ',
+    ready:'ГОТОВА СЪМ, КОГАТО СИ И ТИ',contactHeading:'Нека кадрите ти<br><em>работят по-силно.</em>',
+    contactCopy:'Изпрати ми профила си или няколко сурови кадъра. Мога да предложа посока, да напиша сценария и да превърна материала в завършено кратко видео.',emailMe:'Пиши ми',directEmail:'ИМЕЙЛ ЗА КОНТАКТ',emailHelp:'Копирай адреса или го отвори в приложението си за имейл.',copyEmail:'Копирай имейла',openEmail:'Отвори имейл',copied:'ИМЕЙЛЪТ Е КОПИРАН',
+    footerLeft:'VESSELINA BELCHEVA · ВИДЕО МОНТАЖ И ДИЗАЙН',footerRight:'ОБНОВЕНО 08.2026'
+  }
+};
+
+function setLanguage(lang){
+  const dict=translations[lang]||translations.en;
+  document.documentElement.lang=lang;
+  document.body.dataset.lang=lang;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const key=el.dataset.i18n;if(dict[key]!==undefined)el.textContent=dict[key]});
+  document.querySelectorAll('[data-i18n-html]').forEach(el=>{const key=el.dataset.i18nHtml;if(dict[key]!==undefined)el.innerHTML=dict[key]});
+  document.querySelectorAll('[data-lang-btn]').forEach(btn=>btn.classList.toggle('active',btn.dataset.langBtn===lang));
+  document.title=lang==='bg'?'Vesselina Belcheva — Видео монтаж и дизайн за социални мрежи':'Vesselina Belcheva — Video Editing & Social Media Design';
+  document.querySelector('meta[name="description"]').setAttribute('content',lang==='bg'?'Vesselina Belcheva — сценарии, обработка на кратки видеа и дизайн за социални мрежи.':'Vesselina Belcheva — short-form video editing, scripting and social media design for brands and service businesses.');
+  localStorage.setItem('portfolioLang',lang);
+}
+document.querySelectorAll('[data-lang-btn]').forEach(btn=>btn.addEventListener('click',()=>setLanguage(btn.dataset.langBtn)));
+setLanguage(localStorage.getItem('portfolioLang')||'en');
+
+const carousel=document.getElementById('posterCarousel');
+const prev=document.getElementById('prevPoster');
+const next=document.getElementById('nextPoster');
+function carouselStep(){const card=carousel.querySelector('.poster-card');return card?card.getBoundingClientRect().width+10:carousel.clientWidth*.8}
+function updateCarouselButtons(){const max=carousel.scrollWidth-carousel.clientWidth-2;prev.disabled=carousel.scrollLeft<=2;next.disabled=carousel.scrollLeft>=max}
+prev.addEventListener('click',()=>carousel.scrollBy({left:-carouselStep(),behavior:'smooth'}));
+next.addEventListener('click',()=>carousel.scrollBy({left:carouselStep(),behavior:'smooth'}));
+carousel.addEventListener('scroll',updateCarouselButtons,{passive:true});
+window.addEventListener('resize',updateCarouselButtons);
+updateCarouselButtons();
+
+const box=document.getElementById('lightbox');
+const boxImg=box.querySelector('img');
+document.querySelectorAll('.poster-card img').forEach(img=>img.addEventListener('click',()=>{boxImg.src=img.src;box.classList.add('open');box.setAttribute('aria-hidden','false')}));
+box.addEventListener('click',()=>{box.classList.remove('open');box.setAttribute('aria-hidden','true');boxImg.src=''});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&box.classList.contains('open'))box.click()});
+
+const copyEmailBtn=document.getElementById('copyEmail');
+const copyStatus=document.getElementById('copyStatus');
+if(copyEmailBtn){
+  copyEmailBtn.addEventListener('click',async()=>{
+    const email='veselina.belcheva8@gmail.com';
+    try{
+      await navigator.clipboard.writeText(email);
+    }catch(e){
+      const area=document.createElement('textarea');
+      area.value=email;document.body.appendChild(area);area.select();
+      document.execCommand('copy');area.remove();
+    }
+    const lang=localStorage.getItem('portfolioLang')||document.documentElement.lang||'en';
+    copyStatus.textContent=(translations[lang]&&translations[lang].copied)||'EMAIL COPIED';
+    setTimeout(()=>{copyStatus.textContent='';},2600);
+  });
+}
+
+
+document.querySelectorAll('video').forEach(video=>{
+  video.addEventListener('play',()=>{
+    document.querySelectorAll('video').forEach(other=>{if(other!==video)other.pause()});
+  });
+});
+
+</script>
+</body>
+</html>
