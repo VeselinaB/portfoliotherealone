@@ -40,7 +40,6 @@ body{
   line-height:1.55;
   -webkit-font-smoothing:antialiased;
   min-height:100vh;
-  overflow-x:hidden;
 }
 a{color:inherit}
 button{font:inherit}
@@ -88,47 +87,6 @@ h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.9rem,4vw,2.75rem);le
 .meta-row{border-top:1px solid var(--line);padding-top:9px;font-size:10px;color:var(--muted)}
 .meta-row strong{display:block;color:var(--text);font-weight:500;margin-bottom:3px;letter-spacing:.045em}
 
-/* Compact proof, followed by the editor introduction and selected short-form work */
-.client-proof{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-bottom:28px}
-.proof-card{border:1px solid var(--line);border-radius:9px;padding:18px 20px;background:linear-gradient(135deg,rgba(16,37,58,.78),rgba(8,23,38,.92));min-width:0}
-.proof-card .tag{margin-bottom:10px}
-.proof-card strong{display:block;font-family:'Space Grotesk',sans-serif;font-size:1.05rem;margin-bottom:4px}
-.proof-card p{color:var(--muted);font-size:.84rem;max-width:480px;text-wrap:pretty}
-
-.shortform-project{margin-bottom:28px}
-.shortform-project-copy{grid-template-columns:1fr}
-.shortform-wrap{padding:0 18px 22px}
-.personal-intro-card{overflow:hidden;border:1px solid var(--line-strong);border-radius:8px;background:rgba(7,21,34,.72);margin-bottom:12px}
-.personal-intro-media{aspect-ratio:16/9;background:#02060b;line-height:0}
-.personal-intro-media video{width:100%;height:100%;display:block;object-fit:contain;background:#02060b}
-.personal-intro-info{display:grid;grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr);gap:24px;align-items:center;padding:15px 17px;border-top:1px solid var(--line)}
-.personal-intro-info .tag{margin-bottom:7px}
-.personal-intro-info h4{font-family:'Space Grotesk',sans-serif;font-size:1rem;letter-spacing:-.01em}
-.personal-intro-info p{max-width:none;font-size:.84rem}
-.shortform-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,4fr) minmax(0,3fr);gap:12px;align-items:stretch}
-.shortform-card{display:flex;flex-direction:column;overflow:hidden;border:1px solid var(--line);border-radius:8px;background:rgba(7,21,34,.72);min-width:0}
-.shortform-media{overflow:hidden;background:#02060b;line-height:0;width:100%}
-.shortform-media.landscape{aspect-ratio:16/9}
-.shortform-media.standard{aspect-ratio:3/4}
-.shortform-media.vertical{aspect-ratio:9/16}
-.shortform-media video{width:100%;height:100%;display:block;object-fit:contain;background:#02060b}
-.shortform-info{display:flex;flex-direction:column;flex:1;padding:12px 13px 13px;border-top:1px solid var(--line)}
-.shortform-info .tag{margin-bottom:8px}
-.shortform-info h4{font-family:'Space Grotesk',sans-serif;font-size:.98rem;margin-bottom:6px;letter-spacing:-.01em}
-.shortform-info p{font-size:.8rem;line-height:1.48;min-height:3.55em}
-.shortform-actions{margin-top:auto;padding-top:11px}
-.compare-btn{width:100%;min-height:38px;border:1px solid var(--line-strong);border-radius:5px;background:rgba(116,185,255,.08);color:var(--text);font-size:.76rem;font-weight:600;cursor:pointer;transition:.2s ease}
-.compare-btn:hover{border-color:var(--blue);color:#cfe7ff;background:rgba(116,185,255,.12)}
-.featured-badge{color:#06111b;background:linear-gradient(100deg,var(--blue),#a4d2ff);border:0;font-weight:700}
-
-.compare-dialog{width:min(920px,calc(100vw - 28px));max-height:calc(100vh - 28px);margin:auto;border:1px solid var(--line-strong);border-radius:10px;background:#071522;color:var(--text);box-shadow:0 28px 100px rgba(0,0,0,.62);overflow:auto}
-.compare-dialog::backdrop{background:rgba(2,7,12,.9);backdrop-filter:blur(5px)}
-.compare-dialog-head{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 16px;border-bottom:1px solid var(--line);position:sticky;top:0;background:#071522;z-index:2}
-.compare-dialog-head strong{font-family:'Space Grotesk',sans-serif;font-size:.95rem}
-.dialog-close{width:34px;height:34px;border:1px solid var(--line-strong);border-radius:50%;background:transparent;color:var(--text);cursor:pointer;font-size:20px;line-height:1}
-.compare-video{padding:12px;line-height:0}
-.compare-video video{width:100%;height:auto;display:block;border-radius:6px;background:#02060b}
-
 
 /* Concept video collection — full-width boxed gallery like the Sublue project */
 .concept-project{margin-top:34px}
@@ -164,12 +122,11 @@ h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.9rem,4vw,2.75rem);le
 }
 .portrait-media{aspect-ratio:9/16}
 .landscape-media{aspect-ratio:16/9}
-.nike-media{aspect-ratio:480/253}
 .concept-media video{
   width:100%;
   height:100%;
   display:block;
-  object-fit:contain;
+  object-fit:cover;
   background:#02060b;
 }
 .concept-piece-info{
@@ -245,13 +202,12 @@ h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.9rem,4vw,2.75rem);le
 
 /* Sublue collage — same visual idea as the original site, but aligned */
 .video-wrap{padding:0 18px 21px}
-.video-gallery{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,4fr);grid-template-rows:auto auto auto;gap:10px;align-items:start}
+.video-gallery{display:grid;grid-template-columns:minmax(0,.65fr) minmax(0,1fr);grid-template-rows:auto auto;gap:10px;align-items:stretch}
 .video-cell{overflow:hidden;border-radius:7px;border:1px solid var(--line);background:#02060b;min-width:0}
-.video-cell video{width:100%;height:100%;display:block;background:#02060b;object-fit:contain}
-.video-cell.v-vertical{grid-column:1;grid-row:1;aspect-ratio:3/4}
+.video-cell video{width:100%;height:100%;display:block;background:#02060b;object-fit:cover}
+.video-cell.v-vertical{grid-column:1;grid-row:1;align-self:stretch}
 .video-cell.v-square{grid-column:2;grid-row:1;aspect-ratio:1/1}
 .video-cell.v-horizontal{grid-column:1/3;grid-row:2;aspect-ratio:16/9}
-.video-cell.v-horizontal-extra{grid-column:1/3;grid-row:3;aspect-ratio:16/9}
 
 .testimonial-card{
   position:relative;
@@ -329,7 +285,6 @@ footer{padding:38px 0 55px;color:var(--muted-2);font-size:9px;display:flex;justi
 
 @media(max-width:900px){
   .project-copy{grid-template-columns:1fr}.meta-list{grid-template-columns:repeat(3,1fr)}
-  .personal-intro-info{grid-template-columns:1fr;gap:8px}
   .poster-card{flex-basis:calc((100% - 20px)/3)}
   .cap-grid{grid-template-columns:repeat(2,1fr)}
 }
@@ -339,11 +294,9 @@ footer{padding:38px 0 55px;color:var(--muted-2);font-size:9px;display:flex;justi
   .lang-switch button{padding:6px 8px;font-size:10px}
   .hero{padding:52px 0 44px}.eyebrow{font-size:10.2px;margin-bottom:14px;line-height:1.5}h1{font-size:clamp(2.65rem,14.2vw,4.35rem);line-height:.97;letter-spacing:-.047em}.hero-copy{font-size:1.02rem;line-height:1.62;margin-top:22px}.hero-meta{margin-top:22px}.hero-rule{margin-top:45px}
   section{padding:52px 0}.section-head{display:block;margin-bottom:22px}h2{font-size:clamp(1.75rem,8.3vw,2.35rem)}.project-copy{padding:22px 17px;gap:20px}.project h3{font-size:1.23rem}.meta-list{grid-template-columns:1fr}
-  .client-proof{grid-template-columns:1fr;gap:9px;margin-bottom:22px}.proof-card{padding:16px}
-  .shortform-wrap{padding:0 10px 14px}.shortform-grid{grid-template-columns:1fr;gap:10px}.personal-intro-card{margin-bottom:10px}.personal-intro-info{display:block;padding:13px 14px}.personal-intro-info p{margin-top:8px;font-size:.8rem}.shortform-info{padding:12px}.shortform-info p{min-height:0}.compare-btn{min-height:41px}
   .carousel-wrap{padding:0 12px 16px}.carousel-head{margin-bottom:8px}.carousel-btn{width:34px;height:34px}.poster-card{flex-basis:84%}.carousel-note{text-align:left;padding-left:2px}
   .video-wrap{padding:0 12px 16px}.video-gallery{grid-template-columns:1fr;grid-template-rows:none;gap:9px}
-  .video-cell.v-vertical,.video-cell.v-square,.video-cell.v-horizontal,.video-cell.v-horizontal-extra{grid-column:1;grid-row:auto}
+  .video-cell.v-vertical,.video-cell.v-square,.video-cell.v-horizontal{grid-column:1;grid-row:auto}
   .video-cell.v-vertical{aspect-ratio:3/4}.video-cell.v-square{aspect-ratio:1/1}.video-cell.v-horizontal{aspect-ratio:16/9}
   .testimonial-card{margin:0 12px 14px;padding:20px 16px 18px}.testimonial-card:before{right:6px;top:-18px;font-size:100px}.testimonial-card blockquote{font-size:.93rem;line-height:1.55}
   .cap-grid{grid-template-columns:1fr}.cap{min-height:auto;padding:19px}.process{grid-template-columns:1fr}.process-step{border-right:0;border-bottom:1px solid var(--line);padding:19px}.process-step:last-child{border-bottom:0}
@@ -402,89 +355,6 @@ footer{padding:38px 0 55px;color:var(--muted-2);font-size:9px;display:flex;justi
         <p class="section-sub" data-i18n="workSub">A selection of client and brand work across social design, scripting and short-form video editing.</p>
       </div>
     </div>
-
-    <div class="client-proof" aria-label="Client experience">
-      <div class="proof-card">
-        <span class="tag mono" data-i18n="proofPlanTag">ONGOING CLIENT · FOOD BUSINESS</span>
-        <strong>Plan B Varna</strong>
-        <p data-i18n="proofPlanCopy">16 branded social posts across July and August, with the collaboration continuing.</p>
-      </div>
-      <div class="proof-card">
-        <span class="tag mono" data-i18n="proofSublueTag">BRAND CLIENT · PRODUCT CONTENT</span>
-        <strong>Sublue</strong>
-        <p data-i18n="proofSublueCopy">60+ short-form videos delivered across April and May 2026.</p>
-      </div>
-    </div>
-
-    <article class="project shortform-project" id="short-form">
-      <div class="project-copy shortform-project-copy">
-        <div>
-          <span class="tag mono" data-i18n="shortformEyebrow">SELECTED SHORT-FORM EDITING</span>
-          <h3 data-i18n="shortformHeading">Expert-led content, shaped to hold attention.</h3>
-          <p data-i18n="shortformIntro">Three expert-led edits built around clear hooks, readable captions, purposeful cutaways and tighter pacing.</p>
-        </div>
-      </div>
-
-      <div class="shortform-wrap">
-        <article class="personal-intro-card">
-          <div class="personal-intro-media">
-            <video playsinline controls preload="metadata" poster="assets/personal-intro-poster.jpg">
-              <source src="assets/personal-intro.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="personal-intro-info">
-            <div>
-              <span class="tag mono" data-i18n="personalTag">MEET THE EDITOR</span>
-              <h4 data-i18n="personalTitle">A quick introduction.</h4>
-            </div>
-            <p data-i18n="personalCopy">A short introduction to who I am, how I approach editing and the kind of expert-led content I help shape.</p>
-          </div>
-        </article>
-
-        <div class="shortform-grid">
-          <article class="shortform-card">
-            <div class="shortform-media standard">
-              <video playsinline controls preload="metadata" poster="assets/shortform-wil-fleming-poster.jpg">
-                <source src="assets/shortform-wil-fleming.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="shortform-info">
-              <span class="tag mono featured-badge" data-i18n="featuredTag">FEATURED EDIT</span>
-              <h4>Wil Fleming</h4>
-              <p data-i18n="wilCopy">A performance-coaching edit with a clear hook, tight pacing, readable captions and focused visual support.</p>
-              <div class="shortform-actions"><button class="compare-btn" type="button" data-open-dialog="wilComparison" data-i18n="viewBeforeAfter">View before &amp; after</button></div>
-            </div>
-          </article>
-
-          <article class="shortform-card">
-            <div class="shortform-media standard">
-              <video playsinline controls preload="metadata" poster="assets/shortform-nicolas-cole-poster.jpg">
-                <source src="assets/shortform-nicolas-cole.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="shortform-info">
-              <span class="tag mono" data-i18n="nicolasTag">BUSINESS EDUCATION · SHORT-FORM</span>
-              <h4>Nicolas Cole</h4>
-              <p data-i18n="nicolasCopy">A business-education short shaped around a clear hook, structured captions and visual emphasis that keeps a dense idea moving.</p>
-            </div>
-          </article>
-
-          <article class="shortform-card">
-            <div class="shortform-media vertical">
-              <video playsinline controls preload="metadata" poster="assets/shortform-blaine-poster.jpg">
-                <source src="assets/shortform-blaine.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="shortform-info">
-              <span class="tag mono" data-i18n="blaineTag">COACH CONTENT · SHORT-FORM</span>
-              <h4>Blaine McConnell</h4>
-              <p data-i18n="blaineCopy">A vertical coaching edit balancing direct-to-camera delivery, supporting visuals, captions and clean pacing.</p>
-              <div class="shortform-actions"><button class="compare-btn" type="button" data-open-dialog="blaineComparison" data-i18n="viewBeforeAfter">View before &amp; after</button></div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </article>
 
     <article class="project">
       <div class="project-copy">
@@ -547,7 +417,6 @@ footer{padding:38px 0 55px;color:var(--muted-2);font-size:9px;display:flex;justi
           <div class="video-cell v-vertical"><video playsinline controls preload="metadata" poster="assets/sublue-vertical-poster.jpg"><source src="assets/sublue-vertical.mp4" type="video/mp4"></video></div>
           <div class="video-cell v-square"><video playsinline controls preload="metadata" poster="assets/sublue-square-poster.jpg"><source src="assets/sublue-square.mp4" type="video/mp4"></video></div>
           <div class="video-cell v-horizontal"><video playsinline controls preload="metadata" poster="assets/sublue-horizontal-poster.jpg"><source src="assets/sublue-horizontal.mp4" type="video/mp4"></video></div>
-          <div class="video-cell v-horizontal-extra"><video playsinline controls preload="metadata" poster="assets/sublue-31-poster.jpg"><source src="assets/sublue-31.mp4" type="video/mp4"></video></div>
         </div>
       </div>
     </article>
@@ -564,6 +433,31 @@ footer{padding:38px 0 55px;color:var(--muted-2);font-size:9px;display:flex;justi
       <div class="concept-video-wrap">
         <div class="concept-gallery">
 
+          <article class="concept-piece portrait-piece">
+            <div class="concept-media portrait-media">
+              <video playsinline controls preload="metadata" poster="assets/concept-edit-02-poster.jpg">
+                <source src="assets/concept-edit-02.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="concept-piece-info">
+              <strong data-i18n="concept02Title">Concept Edit 02</strong>
+              <span class="mono" data-i18n="concept02Meta">PACING · TYPOGRAPHY · SOUND · MOOD</span>
+            </div>
+            <p class="concept-disclosure" data-i18n="aiVoiceNote">AI voiceover used because no original speaker recording was available.</p>
+          </article>
+
+          <article class="concept-piece portrait-piece">
+            <div class="concept-media portrait-media">
+              <video playsinline controls preload="metadata" poster="assets/talking-head-edit-poster.jpg">
+                <source src="assets/talking-head-edit.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="concept-piece-info">
+              <strong data-i18n="talkTitle">Talking Head Edit</strong>
+              <span class="mono" data-i18n="talkMeta">SUBTITLES · PACING · SOCIAL EDIT</span>
+            </div>
+          </article>
+
           <article class="concept-piece landscape-piece">
             <div class="concept-media landscape-media">
               <video playsinline controls preload="metadata" poster="assets/concept-edit-01-poster.jpg">
@@ -578,7 +472,7 @@ footer{padding:38px 0 55px;color:var(--muted-2);font-size:9px;display:flex;justi
           </article>
 
           <article class="concept-piece landscape-piece">
-            <div class="concept-media nike-media">
+            <div class="concept-media landscape-media">
               <video playsinline controls preload="metadata" poster="assets/nike-sound-design-poster.jpg">
                 <source src="assets/nike-sound-design.mp4" type="video/mp4">
               </video>
@@ -651,22 +545,6 @@ footer{padding:38px 0 55px;color:var(--muted-2);font-size:9px;display:flex;justi
 
 <div class="lightbox" id="lightbox" aria-hidden="true"><img src="" alt="Expanded portfolio image"></div>
 
-<dialog class="compare-dialog" id="wilComparison">
-  <div class="compare-dialog-head">
-    <strong data-i18n="wilComparisonTitle">Wil Fleming — before &amp; after</strong>
-    <button class="dialog-close" type="button" data-close-dialog aria-label="Close comparison">×</button>
-  </div>
-  <div class="compare-video"><video playsinline controls preload="metadata"><source src="assets/shortform-wil-before-after.mp4" type="video/mp4"></video></div>
-</dialog>
-
-<dialog class="compare-dialog" id="blaineComparison">
-  <div class="compare-dialog-head">
-    <strong data-i18n="blaineComparisonTitle">Blaine McConnell — before &amp; after</strong>
-    <button class="dialog-close" type="button" data-close-dialog aria-label="Close comparison">×</button>
-  </div>
-  <div class="compare-video"><video playsinline controls preload="metadata"><source src="assets/shortform-blaine-before-after.mp4" type="video/mp4"></video></div>
-</dialog>
-
 <script>
 const translations={
   en:{
@@ -677,10 +555,6 @@ const translations={
     pill1:'BASED IN BULGARIA · WORKING REMOTELY',pill2:'CLIENT-PROVIDED FOOTAGE',pill3:'AVAILABLE FOR NEW PROJECTS',
     viewWork:'View selected work',startProject:'Start a project',selectedWork:'SELECTED WORK',
     workHeading:'Design, editing and story — built for social.',workSub:'A selection of client and brand work across social design, scripting and short-form video editing.',
-    proofPlanTag:'ONGOING CLIENT · FOOD BUSINESS',proofPlanCopy:'16 branded social posts across July and August, with the collaboration continuing.',proofSublueTag:'BRAND CLIENT · PRODUCT CONTENT',proofSublueCopy:'60+ short-form videos delivered across April and May 2026.',
-    shortformEyebrow:'SELECTED SHORT-FORM EDITING',shortformHeading:'Expert-led content, shaped to hold attention.',shortformIntro:'Three expert-led edits built around clear hooks, readable captions, purposeful cutaways and tighter pacing.',
-    personalTag:'MEET THE EDITOR',personalTitle:'A quick introduction.',personalCopy:'A short introduction to who I am, how I approach editing and the kind of expert-led content I help shape.',
-    featuredTag:'FEATURED EDIT',wilCopy:'A performance-coaching edit with a clear hook, tight pacing, readable captions and focused visual support.',nicolasTag:'BUSINESS EDUCATION · SHORT-FORM',nicolasCopy:'A business-education short shaped around a clear hook, structured captions and visual emphasis that keeps a dense idea moving.',blaineTag:'COACH CONTENT · SHORT-FORM',blaineCopy:'A vertical coaching edit balancing direct-to-camera delivery, supporting visuals, captions and clean pacing.',viewBeforeAfter:'View before & after',wilComparisonTitle:'Wil Fleming — before & after',blaineComparisonTitle:'Blaine McConnell — before & after',
     planTag:'ONGOING CLIENT · SOCIAL DESIGN',planTitle:'Plan B Varna — Social Content Series',
     planCopy:'An ongoing monthly collaboration with a local food brand: eight social posts for July and another eight for August. I built a connected visual system using oversized typography, strong food crops and repeated brand details, while giving every post its own composition.',
     role:'ROLE',deliverables:'DELIVERABLES',date:'DATE',format:'FORMAT',planRole:'Art direction · Design · Photo treatment',planDeliverables:'16 social posts · 8 per month',planDate:'July–August 2026 · Ongoing',
@@ -717,10 +591,6 @@ const translations={
     pill1:'БАЗИРАНА В БЪЛГАРИЯ · РАБОТЯ ДИСТАНЦИОННО',pill2:'РАБОТЯ С КАДРИ ОТ КЛИЕНТА',pill3:'ПРИЕМАМ НОВИ ПРОЕКТИ',
     viewWork:'Виж избрана работа',startProject:'Започни проект',selectedWork:'ИЗБРАНА РАБОТА',
     workHeading:'Дизайн, монтаж и история — създадени за социалните мрежи.',workSub:'Подбрани клиентски и бранд проекти в областта на дизайна, сценариите и обработката на кратки видеа.',
-    proofPlanTag:'ПОСТОЯНЕН КЛИЕНТ · БИЗНЕС ЗА ХРАНА',proofPlanCopy:'16 брандирани публикации за юли и август, като съвместната работа продължава.',proofSublueTag:'БРАНД КЛИЕНТ · ПРОДУКТОВО СЪДЪРЖАНИЕ',proofSublueCopy:'Над 60 кратки видеа, предадени през април и май 2026 г.',
-    shortformEyebrow:'ПОДБРАН МОНТАЖ НА КРАТКИ ВИДЕА',shortformHeading:'Експертно съдържание, оформено да задържа вниманието.',shortformIntro:'Три монтажа на експертно съдържание с ясни начала, четими субтитри, целенасочени допълващи кадри и по-стегнат ритъм.',
-    personalTag:'ЗАПОЗНАЙТЕ СЕ С МОНТАЖИСТА',personalTitle:'Кратко представяне.',personalCopy:'Кратко представяне на това коя съм, как подхождам към монтажа и как оформям експертно съдържание за социални мрежи.',
-    featuredTag:'ИЗБРАН МОНТАЖ',wilCopy:'Монтаж за треньор по спортна подготовка с ясно начало, стегнат ритъм, четими субтитри и целенасочена визуална подкрепа.',nicolasTag:'БИЗНЕС ОБРАЗОВАНИЕ · КРАТКО ВИДЕО',nicolasCopy:'Кратко образователно бизнес видео с ясно начало, структурирани субтитри и визуални акценти, които поддържат движението на по-плътна идея.',blaineTag:'СЪДЪРЖАНИЕ ЗА ТРЕНЬОР · КРАТКО ВИДЕО',blaineCopy:'Вертикален монтаж за треньор, който съчетава директно говорене, допълващи кадри, субтитри и чист ритъм.',viewBeforeAfter:'Виж преди и след',wilComparisonTitle:'Wil Fleming — преди и след',blaineComparisonTitle:'Blaine McConnell — преди и след',
     planTag:'ПОСТОЯНЕН КЛИЕНТ · ДИЗАЙН ЗА СОЦИАЛНИ МРЕЖИ',planTitle:'Plan B Varna — серия за социални мрежи',
     planCopy:'Продължаваща месечна работа с местен бранд за храна: осем публикации за юли и още осем за август. Създадох свързана визуална система с едра типография, силно изрязани кадри на храната и повтарящи се бранд елементи, като всяка публикация запазва собствена композиция.',
     role:'РОЛЯ',deliverables:'ИЗПЪЛНЕНИЕ',date:'ДАТА',format:'ФОРМАТ',planRole:'Визуална посока · Дизайн · Обработка на снимки',planDeliverables:'16 публикации · по 8 месечно',planDate:'юли–август 2026 · текуща работа',
@@ -800,17 +670,6 @@ if(copyEmailBtn){
   });
 }
 
-document.querySelectorAll('[data-open-dialog]').forEach(button=>{
-  button.addEventListener('click',()=>{
-    const dialog=document.getElementById(button.dataset.openDialog);
-    if(dialog&&typeof dialog.showModal==='function')dialog.showModal();
-  });
-});
-document.querySelectorAll('.compare-dialog').forEach(dialog=>{
-  dialog.querySelector('[data-close-dialog]')?.addEventListener('click',()=>dialog.close());
-  dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close()});
-  dialog.addEventListener('close',()=>dialog.querySelectorAll('video').forEach(video=>video.pause()));
-});
 
 document.querySelectorAll('video').forEach(video=>{
   video.addEventListener('play',()=>{
