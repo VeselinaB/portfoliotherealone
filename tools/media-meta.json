@@ -1,0 +1,152 @@
+{
+ "aesthetic-al-suunto-vs-garmin": {
+  "w": 720,
+  "h": 1280,
+  "dur": 47.9,
+  "orient": "vertical",
+  "fps": 29.97,
+  "src_rate": "30000/1001",
+  "out_rate": "30000/1001",
+  "mb": 9.84
+ },
+ "aesthetic-al-suunto-race-2": {
+  "w": 720,
+  "h": 1280,
+  "dur": 60.7,
+  "orient": "vertical",
+  "fps": 29.97,
+  "src_rate": "30000/1001",
+  "out_rate": "30000/1001",
+  "mb": 15.26
+ },
+ "aesthetic-al-garmin-cirqa": {
+  "w": 720,
+  "h": 1280,
+  "dur": 24.8,
+  "orient": "vertical",
+  "fps": 29.97,
+  "src_rate": "30000/1001",
+  "out_rate": "30000/1001",
+  "mb": 5.47
+ },
+ "italy-2026": {
+  "w": 1280,
+  "h": 720,
+  "dur": 13.9,
+  "orient": "horizontal",
+  "fps": 59.94,
+  "src_rate": "60000/1001",
+  "out_rate": "60000/1001",
+  "mb": 4.75
+ },
+ "kian-deehan-sleep": {
+  "w": 720,
+  "h": 1280,
+  "dur": 23.1,
+  "orient": "vertical",
+  "fps": 30.0,
+  "src_rate": "30/1",
+  "out_rate": "30/1",
+  "mb": 6.14
+ },
+ "triangle-liquidators-ad": {
+  "w": 720,
+  "h": 1280,
+  "dur": 29.2,
+  "orient": "vertical",
+  "fps": 24.0,
+  "src_rate": "24/1",
+  "out_rate": "24/1",
+  "mb": 2.39
+ },
+ "alfredo-scarlata-procrastination": {
+  "w": 1280,
+  "h": 720,
+  "dur": 63.6,
+  "orient": "horizontal",
+  "fps": 30.0,
+  "src_rate": "30/1",
+  "out_rate": "30/1",
+  "mb": 7.72
+ },
+ "zakk-colburn-coaching": {
+  "w": 1280,
+  "h": 720,
+  "dur": 13.8,
+  "orient": "horizontal",
+  "fps": 59.94,
+  "src_rate": "60000/1001",
+  "out_rate": "60000/1001",
+  "mb": 2.69
+ },
+ "sharelle-grant-training": {
+  "w": 720,
+  "h": 1280,
+  "dur": 14.3,
+  "orient": "vertical",
+  "fps": 25.0,
+  "src_rate": "25/1",
+  "out_rate": "25/1",
+  "mb": 3.31
+ },
+ "nyc-marathon-coach-mark": {
+  "w": 720,
+  "h": 1280,
+  "dur": 26.7,
+  "orient": "vertical",
+  "fps": 24.0,
+  "src_rate": "24/1",
+  "out_rate": "24/1",
+  "mb": 5.15
+ },
+ "micha-strength-training": {
+  "w": 720,
+  "h": 1280,
+  "dur": 34.0,
+  "orient": "vertical",
+  "fps": 29.97,
+  "src_rate": "30000/1001",
+  "out_rate": "30000/1001",
+  "mb": 5.2
+ },
+ "punchy-spec-ad": {
+  "w": 720,
+  "h": 1280,
+  "dur": 16.0,
+  "orient": "vertical",
+  "fps": 60.0,
+  "src_rate": "60/1",
+  "out_rate": "60/1",
+  "mb": 5.05
+ },
+ "orka-spec-ad": {
+  "w": 720,
+  "h": 1280,
+  "dur": 15.0,
+  "orient": "vertical",
+  "fps": 60.0,
+  "src_rate": "60/1",
+  "out_rate": "60/1",
+  "mb": 2.19
+ },
+ "aspire-spec-ad": {
+  "w": 720,
+  "h": 1280,
+  "dur": 15.0,
+  "orient": "vertical",
+  "fps": 60.0,
+  "src_rate": "60/1",
+  "out_rate": "60/1",
+  "mb": 3.95
+ },
+ "kendall-strampel-coaching": {
+  "w": 1280,
+  "h": 720,
+  "dur": 11.3,
+  "orient": "horizontal",
+  "fps": 23.976,
+  "src_rate": "24000/1001",
+  "out_rate": "24000/1001",
+  "mb": 2.17
+ }
+}

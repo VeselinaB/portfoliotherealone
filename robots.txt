@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /_backup/
+Disallow: /veselina-portfolio/
+
+Sitemap: https://vb8portfolio.netlify.app/sitemap.xml

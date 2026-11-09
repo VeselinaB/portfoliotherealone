@@ -1,0 +1,7 @@
+{
+ "sublue": {"pw": 810, "ph": 1080, "orient": "vertical"},
+ "wil-fleming": {"pw": 810, "ph": 1080, "orient": "vertical"},
+ "blaine": {"pw": 608, "ph": 1080, "orient": "vertical"},
+ "nike": {"pw": 1920, "ph": 1012, "orient": "horizontal"},
+ "personal-intro": {"pw": 1280, "ph": 720, "orient": "horizontal"}
+}
